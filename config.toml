@@ -1,0 +1,29 @@
+baseURL = 'https://bashthefash.ninja/'
+languageCode = 'en-us'
+title = 'BashTheFash'
+theme = 'btf'
+
+[params]
+about = "A growing collective of international antifascists, bringing you updates on issues and events around the globe."
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Sticker Requests"
+    url = "/stickers/"
+    weight = 3
+  [[menu.main]]
+    name = "History of Fascism"
+    url = "/fascism/"
+    weight = 4
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 5

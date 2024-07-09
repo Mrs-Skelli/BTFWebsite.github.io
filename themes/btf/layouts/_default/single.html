@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article>
+    <h1>{{ .Title }}</h1>
+    <div>
+        <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ with .Params.tags }}
+        <div>
+            {{ range . }}
+            <a href="{{ "tags/" | absURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    <div>
+        {{ .Content }}
+    </div>
+</article>
+<article>
+  <h1>{{ .Title }}</h1>
+  <div>
+      <picture>
+          <source srcset="/images/example-image-small.jpg" media="(max-width: 600px)">
+          <source srcset="/images/example-image-medium.jpg" media="(max-width: 1200px)">
+          <img src="/images/example-image-large.jpg" alt="Example Image">
+      </picture>
+      {{ .Content }}
+  </div>
+</article>
+{{ end }}
+
